@@ -1,0 +1,30 @@
+service:
+  name: your-project-name
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  region: ap-northeast-2
+  deploymentBucket:
+    name: bucket-name-for-deployment
+  apiGateway:
+    minimumCompressionSize: 1024
+  environment:
+    NODE_ENV: development
+
+plugins:
+  - serverless-plugin-typescript
+  - serverless-offline
+  - serverless-layers
+
+custom:
+  serverless-layers:
+    packageManager: yarn
+  serverless-offline:
+    useChildProcesses: true
+
+functions:
+  functionName:
+    handler: src/controller/resource.handler
+    events:
+      - http:

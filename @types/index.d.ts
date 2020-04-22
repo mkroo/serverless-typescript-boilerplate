@@ -1,0 +1,3 @@
+interface ThisIsGlobalType {
+  dsa: string
+}

@@ -1,0 +1,17 @@
+{
+  "git.enableSmartCommit": true,
+  "editor.tabSize": 2,
+  "git.autofetch": true,
+  "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+  },
+  "editor.formatOnSave": false,
+  "eslint.validate": [
+      "typescript",
+      "javascript",
+      "javascriptreact",
+      "typescriptreact"
+  ],
+  "files.eol": "\n",
+  "eslint.packageManager": "yarn"
+}
